@@ -1,38 +1,74 @@
-.App {
+body {
+  background: #fffaeb;
+}
+.container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.title {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.type-input {
+  width: 100%;
+  background: transparent;
+  padding: 16px 12px;
+  border: 1px solid gray;
+  font-size: 1rem;
+  border-radius: .5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item-check {
+  width: 1.5em;
+  height: 1.5em;
+  margin: .5rem;
+}
+.item-check.checked + .item-title {
+  text-decoration: line-through;
+}
+.item-list ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+/* .item-title {
+  font-size: 1.5rem;
+} */
+.item-wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.del-btn-wrap {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.del-btn {
+  background-color: transparent;
+  border: 1px solid #f34646;
+  color: #f34646;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: .75rem;
 }
 
-.App-link {
-  color: #61dafb;
+.filter {
+  display: flex;
+  margin-top: .5rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-item {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 6px 12px;
+}
+.filter-item.active {
+  color:tomato;
 }
